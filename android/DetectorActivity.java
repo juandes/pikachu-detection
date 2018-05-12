@@ -43,6 +43,8 @@ import org.tensorflow.demo.env.Logger;
 import org.tensorflow.demo.tracking.MultiBoxTracker;
 import org.tensorflow.demo.R; // Explicit import needed for internal Google builds.
 
+// Last update on May 12, 2018
+
 /**
  * An activity that uses a TensorFlowMultiBoxDetector and ObjectTracker to detect and then track
  * objects.
@@ -63,10 +65,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
   private static final int TF_OD_API_INPUT_SIZE = 300;
 
-
-  //private static final String TF_OD_API_MODEL_FILE =
-    //  "file:///android_asset/ssd_mobilenet_v1_android_export.pb";
-  //private static final String TF_OD_API_LABELS_FILE = "file:///android_asset/coco_labels_list.txt";
 
   // TODO: Add custom model and labels here
   private static final String TF_OD_API_MODEL_FILE =
@@ -95,7 +93,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
   // Minimum detection confidence to track a detection.
   // TODO: Play around with this value
-  private static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.6f;
+  private static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.85f;
   private static final float MINIMUM_CONFIDENCE_MULTIBOX = 0.1f;
   private static final float MINIMUM_CONFIDENCE_YOLO = 0.25f;
 
